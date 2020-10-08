@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="{{url_for('static',filename='main.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <ul class="nav">
+        <li><a href="{{url_for('updates')}}">Updates</a></li>
+        <li><a href="{{url_for('pricing')}}">Pricing</a></li>
+        <li><a href="{{url_for('profile')}}">Profile</a></li>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+    </ul>
+    <br />
+    <div class="order">
+        <h1>Place Order</h1>
+        <form action="{{url_for('order')}}" method="POST">
+            <label for="count">Count</label>
+            <input name="count" type="text" /><br /><br />
+            <label for="brand">Brand:</label>
+            <input name="brand" type="text" /><br /><br />
+            <label for="qty">Quantity:</label>
+            <input name="qty" type="text" /><br /><br />
+            <input type="submit" value="Place Order" id="po" onclick="addorder()" />
+        </form>
+    </div>
+    <br />
+    <div class="uorder">
+        <h1>Your orders</h1>
+        <table>
+            <tr>
+                <th>Count</th>
+                <th>Brand</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>2/20</td>
+                <td>SSM</td>
+                <td>1 Bale</td>
+            </tr>
+        </table>
+    </div>
+    <script src="{{url_for('static',filename='order.js')}}"></script>
+</body>
+
+</html>

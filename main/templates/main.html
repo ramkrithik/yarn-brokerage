@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="{{url_for('static',filename='main.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <ul class="nav">
+        <li><a href="{{url_for('updates')}}">Updates</a></li>
+        <li><a href="{{url_for('pricing')}}">Pricing</a></li>
+        <li><a href="{{url_for('order')}}">Order</a></li>
+        <li><a href="{{url_for('profile')}}">Profile</a></li>
+    </ul>
+    <img id="yarn" src="{{url_for('static',filename='yarn.jpg')}}" />
+    <p id="main">
+        Welcome to the Yarn Pricing and brokerage site.<br /> Here You can Order and get a call back from the representative.
+    </p>
+</body>
+
+</html>
